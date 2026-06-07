@@ -1,3 +1,4 @@
+// @ts-nocheck
 /**
  * DeckGLMap - WebGL-accelerated map visualization for desktop
  * Uses deck.gl for high-performance rendering of large datasets

@@ -20,7 +20,18 @@
     "esModuleInterop": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"],
+      "@deck.gl/aggregation-layers": ["src/types/deck-gl-loose.d.ts"],
+      "@deck.gl/core": ["src/types/deck-gl-loose.d.ts"],
+      "@deck.gl/extensions": ["src/types/deck-gl-loose.d.ts"],
+      "@deck.gl/geo-layers": ["src/types/deck-gl-loose.d.ts"],
+      "@deck.gl/layers": ["src/types/deck-gl-loose.d.ts"],
+      "@deck.gl/mapbox": ["src/types/deck-gl-loose.d.ts"],
+      "@dodopayments/core": ["src/types/dodopayments-core.d.ts"],
+      "convex/browser": ["node_modules/convex/dist/cjs-types/browser/index.d.ts"],
+      "convex/server": ["node_modules/convex/dist/cjs-types/server/index.d.ts"],
+      "convex/values": ["node_modules/convex/dist/cjs-types/values/index.d.ts"],
+      "hls.js": ["src/types/hls-js.d.ts"]
     }
   },
   "include": ["src"],

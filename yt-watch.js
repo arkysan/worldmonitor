@@ -25,7 +25,6 @@ const videos = [
         keywords: info.basic_info?.keywords?.slice(0, 15)
       };
       result.description = info.basic_info?.short_description?.substring(0, 1000);
-
       try {
         const t = await info.getTranscript();
         const segs = t?.transcript?.content?.body?.initial_segments || [];
@@ -37,14 +36,12 @@ const videos = [
       console.log(`Keywords: ${(result.meta.keywords||[]).join(", ")}`);
       console.log(`Description: ${result.description?.substring(0,300)}`);
       console.log(`Transcript: ${result.transcript ? result.transcript.substring(0,400) : "NONE — will use description+title+keywords"}`);
-
       fs.writeFileSync(`${OUT}\\${v.id}.json`, JSON.stringify(result, null, 2));
     } catch(e) {
       console.log(`Error ${v.id}: ${e.message}`);
     }
     results.push(result);
   }
-
   fs.writeFileSync(`${OUT}\\all-videos.json`, JSON.stringify(results, null, 2));
   process.exit(0);
 })();

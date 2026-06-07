@@ -26,7 +26,6 @@ for (const v of videos) {
       keywords: info.basic_info?.keywords?.slice(0, 15)
     };
     result.description = info.basic_info?.short_description?.substring(0, 1500) || "";
-
     try {
       const t = await info.getTranscript();
       const segs = t?.transcript?.content?.body?.initial_segments || [];

@@ -761,6 +761,23 @@ export default defineConfig(({ mode }) => {
     resolve: {
       alias: {
         '@': resolve(__dirname, 'src'),
+        'maplibre-gl/dist/maplibre-gl.css': resolve(__dirname, 'node_modules/maplibre-gl/dist/maplibre-gl.css'),
+        'maplibre-gl': resolve(__dirname, 'node_modules/maplibre-gl/dist/maplibre-gl-dev.js'),
+        'hls.js': resolve(__dirname, 'node_modules/hls.js/dist/hls.js'),
+        'convex/server': resolve(__dirname, 'src/shims/convex-server.ts'),
+        'convex/values': resolve(__dirname, 'node_modules/convex/dist/cjs/values/index.js'),
+        'convex/browser': resolve(__dirname, 'src/shims/convex-browser.ts'),
+        'three/examples/jsm/controls/OrbitControls.js': resolve(__dirname, 'src/shims/trackball-controls.ts'),
+        'three/examples/jsm/controls/TrackballControls.js': resolve(__dirname, 'src/shims/trackball-controls.ts'),
+        'three/examples/jsm/postprocessing/EffectComposer.js': resolve(__dirname, 'src/shims/three-postprocessing.ts'),
+        'three/examples/jsm/postprocessing/RenderPass.js': resolve(__dirname, 'src/shims/three-postprocessing.ts'),
+        'three/examples/jsm': resolve(__dirname, 'node_modules/three/examples/jsm'),
+        'three/webgpu': resolve(__dirname, 'node_modules/three/build/three.cjs'),
+        'three': resolve(__dirname, 'node_modules/three/build/three.cjs'),
+        'three-globe': resolve(__dirname, 'node_modules/three-globe/dist/three-globe.js'),
+        '@deck.gl/core': resolve(__dirname, 'node_modules/@deck.gl/core/dist/index.cjs'),
+        '@loaders.gl/draco': resolve(__dirname, 'node_modules/@loaders.gl/draco/dist/index.cjs'),
+        'onnxruntime-web': resolve(__dirname, 'node_modules/onnxruntime-web/dist/ort.all.min.js'),
         child_process: resolve(__dirname, 'src/shims/child-process.ts'),
         'node:child_process': resolve(__dirname, 'src/shims/child-process.ts'),
         '@loaders.gl/worker-utils/dist/lib/process-utils/child-process-proxy.js': resolve(
