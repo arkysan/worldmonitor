@@ -212,6 +212,8 @@ export function parseBriefJson(text) {
  */
 async function callLlmDefault({ systemPrompt, userPrompt }, opts = {}) {
   const validate = opts.validate;
+  // ARK sovereign kill-switch: WM_CLOUD=off forces local-only (no Groq/OpenRouter egress).
+  if (String(process.env.WM_CLOUD || '').toLowerCase() === 'off') return null;
   for (const provider of DEFAULT_PROVIDERS) {
     const envVal = process.env[provider.envKey];
     if (!envVal) continue;
